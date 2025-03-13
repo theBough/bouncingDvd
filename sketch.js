@@ -4,6 +4,7 @@
 let counter;
 //Create a variable to hold an image
 let img;
+let xSpeed, ySpeed, xLocation,yLocation;
 
 //this gets called once.
 function setup() {
@@ -15,13 +16,18 @@ function setup() {
   counter = 0
   //load the image into our vaiable
   img = loadImage("dvd.png")
+  xSpeed = 1;
+  ySpeed = 1;
+  xLocation = 0
+  yLocation = 0
 }
 
 //This function gets looped over and over
 function draw() {
   background('#003049');
-  counter +=1
-  rect(counter,175,50,50)
-  img.resize(50,50)
-  image(img,0,0)
+  img.resize(75,50)
+  xLocation += xSpeed
+  yLocation += ySpeed
+  image(img,xLocation,yLocation)
+  
 }

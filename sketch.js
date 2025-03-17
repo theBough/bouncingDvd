@@ -20,6 +20,7 @@ function setup() {
   ySpeed = 1;
   xLocation = 0
   yLocation = 0
+  console.log(img.width)
 }
 
 //This function gets looped over and over
@@ -29,5 +30,11 @@ function draw() {
   xLocation += xSpeed
   yLocation += ySpeed
   image(img,xLocation,yLocation)
+  if(xLocation + 75> width){
+    xSpeed *= -1
+  }
+  if(yLocation + 50> height){
+    ySpeed *= -1
+  }
   
 }

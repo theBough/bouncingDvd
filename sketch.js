@@ -30,11 +30,14 @@ function draw() {
   xLocation += xSpeed
   yLocation += ySpeed
   image(img,xLocation,yLocation)
-  if(xLocation + 75> width){
+  //checking for bounce on the right or left side
+  if(xLocation + 75> width || xLocation <  0){
     xSpeed *= -1
   }
-  if(yLocation + 50> height){
+  //checking for Bounce on the bottom or Top
+  if(yLocation + 50> height || yLocation <  0){
     ySpeed *= -1
   }
-  
+ 
+
 }

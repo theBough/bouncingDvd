@@ -4,7 +4,8 @@
 let counter;
 //Create a variable to hold an image
 let img;
-let xSpeed, ySpeed, xLocation,yLocation;
+let xSpeed, ySpeed, xLocation, yLocation;
+let r,g,b;
 
 //this gets called once.
 function setup() {
@@ -20,7 +21,9 @@ function setup() {
   ySpeed = 1;
   xLocation = 0
   yLocation = 0
-  console.log(img.width)
+  r=0;
+  g=0;
+  b=0;
 }
 
 //This function gets looped over and over
@@ -29,6 +32,7 @@ function draw() {
   img.resize(75,50)
   xLocation += xSpeed
   yLocation += ySpeed
+  tint(0,0,255)
   image(img,xLocation,yLocation)
   //checking for bounce on the right or left side
   if(xLocation + 75> width || xLocation <  0){

@@ -33,23 +33,26 @@ function draw() {
   xLocation += xSpeed
   yLocation += ySpeed
   tint(r,g,b)
-
+  
   console.log(r,g,b)
   image(img,xLocation,yLocation)
   //checking for bounce on the right or left side
   if(xLocation + 75> width || xLocation <  0){
     xSpeed *= -1
-    r = Math.floor(Math.random() * 255);
-    g = Math.floor(Math.random() * 255);
-    b = Math.floor(Math.random() * 255);
+    setColour();
   }
   //checking for Bounce on the bottom or Top
   if(yLocation + 50> height || yLocation <  0){
     ySpeed *= -1
-    r = Math.floor(Math.random() * 255);
-    g = Math.floor(Math.random() * 255);
-    b = Math.floor(Math.random() * 255);
+    setColour();
   }
  
 
+}
+
+//set the colour of the logo
+function setColour(){
+    r = Math.floor(Math.random() * 255);
+    g = Math.floor(Math.random() * 255);
+    b = Math.floor(Math.random() * 255);
 }
